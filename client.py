@@ -24,7 +24,7 @@ except KeyError:
 try:
     PORT = int(os.environ['CLIENT_PORT'])
 except KeyError:
-    PORT = 5001
+    PORT = 5000
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((HOST, PORT))

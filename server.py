@@ -21,7 +21,7 @@ except KeyError:
 try:
     PORT = int(os.environ['SERVER_PORT'])
 except KeyError:
-    PORT = 5001
+    PORT = 5000
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind((HOST, PORT))
@@ -43,7 +43,7 @@ while True:
             cmd = data.decode('utf-8')
             response = cmd.upper()
             if cmd == "DESCONEXION":
-                response = "bye"
+                conn.sendall("bye".encode('utf-8'))
                 print(f"\t*** {cmd} *** \n\n")
                 break
 
