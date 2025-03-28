@@ -3,6 +3,9 @@ This module implement the client for use Socket TCP.
 request to user the text that send the server.
 with DESCONEXION command, the connection is finalized
 
+! the names CLIENT_HOST and CLIENT_PORT are explicit and
+clearly refer to the server.
+
 use the next environment:
 :param CLIENT_HOST: default value es `localhost`
 :param CLIENT_PORT: default value es `5000`
